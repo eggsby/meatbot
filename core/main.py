@@ -68,7 +68,10 @@ def run(func, input):
     else:
         out = func(input.inp)
     if out is not None:
-        out = unicode(out, 'utf-8')
+        try:
+            out = unicode(out, 'utf-8')
+        except:
+            out = unicode(out)
         input.reply(out)
 
 
