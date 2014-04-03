@@ -1,6 +1,7 @@
 .*.swp
 *.pyc
 *.orig
+logs/
 persist
 config
 pep8.py
