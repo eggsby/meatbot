@@ -19,7 +19,7 @@ sayings = [
 ]
 
 @hook.regex(*("\\bmeat\\b", re.I))
-def weedbotname(inp):
+def meatbotname(inp):
     return random.choice(sayings)
 
 @hook.regex(*("\\bwow\\b", re.I))
