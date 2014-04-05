@@ -22,7 +22,7 @@ def get_message():
 @hook.command('vw')
 @hook.command
 def virtualwhatever(inp, api_key=None):
-    '.virtualwhatever <tweet> -- become a thought leader'
+    '.virtualwhatever [del] <tweet> -- become a thought leader'
 
     if not isinstance(api_key, dict) or any(key not in api_key for key in
                                             ('consumer', 'consumer_secret', 'access', 'access_secret')):
@@ -35,7 +35,7 @@ def virtualwhatever(inp, api_key=None):
 
     twitter = Twitter(auth=OAuth(access, access_secret, consumer, consumer_secret))
 
-    if inp == "del":
+    if inp[:4].strip() == "del":
         tweet = twitter.statuses.user_timeline(screen_name='virtualwhatever')[0]
         text = tweet.get('text')
         twitter.statuses.destroy(id=tweet.get('id')) 
