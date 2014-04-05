@@ -34,6 +34,13 @@ def virtualwhatever(inp, api_key=None):
     consumer_secret = api_key.get('consumer_secret')
 
     twitter = Twitter(auth=OAuth(access, access_secret, consumer, consumer_secret))
+
+    if inp == "del":
+        tweet = twitter.statuses.user_timeline(screen_name='virtualwhatever')[0]
+        text = tweet.get('text')
+        twitter.statuses.destroy(id=tweet.get('id')) 
+        return 'deleted last tweet: - %s' % text
+
     twitter.statuses.update(status=inp)
     tweet = twitter.statuses.user_timeline(screen_name='virtualwhatever')[0]
     return "%s - https://twitter.com/virtualwhatever/status/%s" % (get_message(), tweet.get('id'))
