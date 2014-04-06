@@ -10,6 +10,7 @@ sayings = [
 "guess who has a boner",
 "~*~ sends meat heart <3 <3 <3 ~*~",
 "wuts all this commotion about",
+"tell me about the rabbits george",
 "weeeeeeed",
 "en tu ano",
 "i'm twerking at tha pyramid 2nite",
