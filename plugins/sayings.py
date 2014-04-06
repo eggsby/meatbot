@@ -16,7 +16,8 @@ sayings = [
 "i'm twerking at tha pyramid 2nite",
 "meeeeaaat",
 "meat?",
-"huehuheuhuehuehue"
+"huehuheuhuehuehue",
+"~*aw u kno u luv me <3 xoxo <3*~"
 ]
 
 @hook.regex(*("\\bmeat\\b", re.I))
