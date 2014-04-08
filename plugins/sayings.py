@@ -3,27 +3,36 @@ from util import hook
 import re
 
 sayings = [
-":D",
-"hi!",
-"weed",
-"gotta love me!",
-"shut up travvy <3",
-"guess who has a boner",
-"~*~ sends meat heart <3 <3 <3 ~*~",
-"wuts all this commotion about",
-"tell me about the rabbits george",
-"weeeeeeed",
-"en tu ano",
-"i'm twerking at tha pyramid 2nite",
-"meeeeaaat",
-"meat?",
-"huehuheuhuehuehue",
-"~*aw u kno u luv me <3 xoxo <3*~",
-"please direct all questions/comments to @tec27!"
+    ":D",
+    "hi!",
+    "weed",
+    "gotta love me!",
+    "~*~ sends meat heart <3 <3 <3 ~*~",
+    "wuts all this commotion about",
+    "tell me about the rabbits george",
+    "weeeeeeed",
+    "en tu ano",
+    "i'm twerking at tha pyramid 2nite",
+    "meeeeaaat",
+    "~*aw u kno u luv me <3 xoxo <3*~",
+    "meat?",
+    "huehuheuhuehuehue",
+    "please direct all questions/comments to @tec27!"
+]
+
+h8r_sayings [
+    "shut up travvy <3",
+    "~*aw u kno u luv me <3 xoxo <3*~"
+]
+
+h8rs = [
+    "tec27"
 ]
 
 @hook.regex(*("(\\bmeat\\b|\\bmeatbot\\b)", re.I))
-def meatbotname(inp):
+def meatbotname(inp, nick=''):
+    if nick.lower() in h8rs:
+        return random.choise(h8r_sayings)
     return random.choice(sayings)
 
 @hook.regex(*("(\\bwow\\b|\\bmom\\b)", re.I))
