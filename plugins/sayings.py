@@ -20,12 +20,10 @@ sayings = [
 "~*aw u kno u luv me <3 xoxo <3*~"
 ]
 
-@hook.regex(*("\\bmeat\\b", re.I))
-@hook.regex(*("\\bmeatbot\\b", re.I))
+@hook.regex(*("(\\bmeat\\b|\\bmeatbot\\b)", re.I))
 def meatbotname(inp):
     return random.choice(sayings)
 
-@hook.regex(*("\\bwow\\b", re.I))
-@hook.regex(*("\\bmom\\b", re.I))
-def mom(inp):
+@hook.regex(*("(\\bwow\\b|\\bmom\\b)", re.I))
+def wowmom(inp):
     return random.choice(["mom wow", "wow mom"])
