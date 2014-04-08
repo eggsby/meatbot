@@ -26,9 +26,6 @@ def meatbotname(inp):
     return random.choice(sayings)
 
 @hook.regex(*("\\bwow\\b", re.I))
-def wow(inp):
-    return "wow mom"
-
 @hook.regex(*("\\bmom\\b", re.I))
 def mom(inp):
-    return "mom wow"
+    return random.choice(["mom wow", "wow mom"])
