@@ -20,7 +20,7 @@ sayings = [
     "please direct all questions/comments to @tec27!"
 ]
 
-h8r_sayings [
+h8r_sayings = [
     "shut up travvy <3",
     "~*aw u kno u luv me <3 xoxo <3*~"
 ]
@@ -32,7 +32,7 @@ h8rs = [
 @hook.regex(*("(\\bmeat\\b|\\bmeatbot\\b)", re.I))
 def meatbotname(inp, nick=''):
     if nick.lower() in h8rs:
-        return random.choise(h8r_sayings)
+        return random.choice(h8r_sayings)
     return random.choice(sayings)
 
 @hook.regex(*("(\\bwow\\b|\\bmom\\b)", re.I))
