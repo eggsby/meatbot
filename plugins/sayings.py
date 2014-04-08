@@ -7,6 +7,7 @@ sayings = [
 "hi!",
 "weed",
 "gotta love me!",
+"shut up travvy <3",
 "guess who has a boner",
 "~*~ sends meat heart <3 <3 <3 ~*~",
 "wuts all this commotion about",
