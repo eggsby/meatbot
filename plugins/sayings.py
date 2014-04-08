@@ -22,7 +22,7 @@ sayings = [
 ]
 
 h8r_sayings = [
-    "shut up travvy <3",
+    "shut up meat 8=========D~~",
     "~*aw u kno u luv me <3 xoxo <3*~"
 ]
 
