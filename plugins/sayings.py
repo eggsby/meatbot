@@ -18,6 +18,7 @@ sayings = [
 "meat?",
 "huehuheuhuehuehue",
 "~*aw u kno u luv me <3 xoxo <3*~"
+"please direct all questions/comments to @tec27!"
 ]
 
 @hook.regex(*("(\\bmeat\\b|\\bmeatbot\\b)", re.I))
