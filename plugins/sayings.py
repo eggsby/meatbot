@@ -17,7 +17,8 @@ sayings = [
     "~*aw u kno u luv me <3 xoxo <3*~",
     "meat?",
     "huehuheuhuehuehue",
-    "please direct all questions/comments to @tec27!"
+    "please direct all questions/comments to @tec27!",
+    "don't talk about balls around @tec27!!!"
 ]
 
 h8r_sayings = [
