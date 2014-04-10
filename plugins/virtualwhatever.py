@@ -1,22 +1,23 @@
 from util import hook
 from twitter import *
-from random import randint
+import random
 
-messages = [
+accepted = [
   "wow great job",
   "en tu ano",
   "huehuehuehue",
-  "so gud",
   "yr tweet is my command",
   "SENDIN THAT TWEET 2 THA PYRAMID 2NITE",
-  "uh huh",
+  "got it",
   "how do you come up with this stuff",
   "BOOM thought leader"
 ]
 
-def get_message():
-    index = randint(1, len(messages)) - 1
-    return messages[index]
+rejected = [
+  "wow learn 2 twitter",
+  "nice rant.. maybe shorten it up a little",
+  "UGH 140 CHARS OR LESS PLZ"
+]
 
 @hook.api_key('virtualwhatever')
 @hook.command('vw')
@@ -41,6 +42,9 @@ def virtualwhatever(inp, api_key=None):
         twitter.statuses.destroy(id=tweet.get('id')) 
         return 'deleted last tweet: - %s' % text
 
+    if len(inp) > 140:
+         return random.choice(rejected)
+
     twitter.statuses.update(status=inp)
     tweet = twitter.statuses.user_timeline(screen_name='virtualwhatever')[0]
-    return "%s - https://twitter.com/virtualwhatever/status/%s" % (get_message(), tweet.get('id'))
+    return "%s - https://twitter.com/virtualwhatever/status/%s" % (random.choice(accepted), tweet.get('id'))
