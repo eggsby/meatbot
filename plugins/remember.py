@@ -104,7 +104,7 @@ def forget(inp, chan='', db=None):
         return "I don't know about that."
 
 
-@hook.regex(r'^\? ?(.+)')
+@hook.regex(r'(\w+) ?\?+$')
 def question(inp, chan='', say=None, db=None):
     "?<word> -- shows what data is associated with word"
     db_init(db)
