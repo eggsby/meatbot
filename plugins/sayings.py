@@ -39,3 +39,9 @@ def meatbotname(inp, nick=''):
 @hook.regex(*("(\\bwow\\b|\\bmom\\b)", re.I))
 def wowmom(inp):
     return random.choice(["mom wow", "wow mom"])
+
+@hook.regex(*("(\\bnot all\\b)", re.I))
+def notall(inp, nick=''):
+    if nick.lower().endswith('s'):
+        return 'NOT ALL ' + nick.upper() + '\'S'
+    return 'NOT ALL ' + nick.upper() + 'S'
