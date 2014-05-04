@@ -4,7 +4,6 @@ import re
 
 sayings = [
     ":D",
-    "hi!",
     "weed",
     "gotta love me!",
     "~*~ sends meat heart <3 <3 <3 ~*~",
@@ -12,11 +11,11 @@ sayings = [
     "tell me about the rabbits george",
     "weeeeeeed",
     "en tu ano",
-    "i'm twerking at tha pyramid 2nite",
+    "i'll c u at tha pyramid 2nite",
     "meeeeaaat",
     "~*aw u kno u luv me <3 xoxo <3*~",
     "meat?",
-    "how do you feel about powerpoint?",
+    "thats kewl.. but how do you feel about ppt?",
     "huehuheuhuehuehue",
     "no boggie",
     "ᕕ( ᐛ )ᕗ  hay",
