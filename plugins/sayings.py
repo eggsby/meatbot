@@ -16,7 +16,10 @@ sayings = [
     "meeeeaaat",
     "~*aw u kno u luv me <3 xoxo <3*~",
     "meat?",
+    "how do you feel about powerpoint?",
     "huehuheuhuehuehue",
+    "no boggie",
+    "ᕕ( ᐛ )ᕗ  hay",
     "please direct all questions/comments to @tec27!",
     "don't talk about balls around @tec27!!!"
 ]
@@ -27,7 +30,6 @@ h8r_sayings = [
 ]
 
 h8rs = [
-    "tec27"
 ]
 
 @hook.regex(*("(\\bmeat\\b|\\bmeatbot\\b)", re.I))
