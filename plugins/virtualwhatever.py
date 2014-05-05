@@ -23,7 +23,7 @@ rejected = [
 @hook.command('vw')
 @hook.command
 def virtualwhatever(inp, api_key=None):
-    '.virtualwhatever [del] <tweet> -- become a thought leader'
+    '.virtualwhatever [ del | rt ] <tweet> -- become a thought leader'
 
     if not isinstance(api_key, dict) or any(key not in api_key for key in
                                             ('consumer', 'consumer_secret', 'access', 'access_secret')):
@@ -41,6 +41,16 @@ def virtualwhatever(inp, api_key=None):
         text = tweet.get('text')
         twitter.statuses.destroy(id=tweet.get('id')) 
         return 'deleted last tweet: - %s' % text
+
+    if inp[:3].strip() == "rt":
+        tweet_id = inp[3:].strip().split("/")[-1]
+        if len(tweet_id) is not 18:
+            return "lol that's not even a tweet"
+        try:
+            tweet = twitter.statuses.retweet(id=tweet_id)
+        except TwitterHTTPError, e:
+            return "i can't retweet that"
+        return "%s - rt: https://twitter.com/%s/status/%s" % (random.choice(accepted), tweet.get('user').get('screen_name'), tweet.get('id'))
 
     if len(inp) > 140:
          return random.choice(rejected)
