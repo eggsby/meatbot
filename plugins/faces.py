@@ -1,6 +1,7 @@
 from util import hook, http
 from random import choice
 import re
+import urllib
 
 @hook.command(autohelp=False)
 def face(inp):
@@ -18,6 +19,7 @@ def face(inp):
         return ", ".join(http.get_json("%s/tags" % url))
 
     if inp:
+        inp = urllib.quote(inp)
         return http.get_json("%s/random/%s" % (url, inp)).get('content', 'whoops')
 
     return http.get_json("%s/random" % url).get('content', 'oops')
