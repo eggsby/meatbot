@@ -19,8 +19,8 @@ sayings = [
     "huehuheuhuehuehue",
     "no boggie",
     "ᕕ( ᐛ )ᕗ  hay",
-    "please direct all questions/comments to @tec27!",
-    "don't talk about balls around @tec27!!!"
+    "please direct all questions/comments to tec27!",
+    "don't talk about balls around tec27!!!"
 ]
 
 h8r_sayings = [
